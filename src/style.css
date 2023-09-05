@@ -1,0 +1,120 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    background-color: lightgray;
+}
+
+.calculator-grid {
+    display: grid;
+    margin-top: 2rem;
+    grid-template-columns: repeat(4,6rem);
+    grid-template-rows: minmax(7rem,auto) repeat(5,6rem);
+    justify-content: center;
+}
+
+.calculator-grid > button{
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid white;
+    outline: none;
+    background-color: rgba(255,255,255,.75);
+}
+
+.calculator-grid > button:hover,
+.calculator-grid > button:focus{
+    background-color: rgba(255,255,255,.9);
+    
+}
+
+.span-two {
+    grid-column: span 2;
+}
+
+.output{
+    grid-column: 1/-1;
+    background-color: rgba(15, 19, 15, 0.75);
+    display: flex ;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding: .75rem;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.output .previous-operand {
+    color: rgba(255,255,255,.75);
+}
+
+.output .current-operand {
+    color: white;
+    font-size: 2.5rem;
+}
+/* Define colors */
+:root {
+    --primary-bg-color: #333;
+    --button-bg-color: #444;
+    --button-hover-color: #555;
+    --text-color: #fff;
+  }
+  
+  body {
+    margin: 0;
+    background-color: var(--primary-bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .calculator-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    max-width: 400px;
+    width: 100%;
+  }
+  
+  .calculator-grid > button {
+    cursor: pointer;
+    font-size: 2rem;
+    border: none;
+    outline: none;
+    background-color: var(--button-bg-color);
+    color: var(--text-color);
+    padding: 20px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .calculator-grid > button:hover,
+  .calculator-grid > button:focus {
+    background-color: var(--button-hover-color);
+  }
+  
+  .output {
+    grid-column: 1/-1;
+    background-color: var(--primary-bg-color);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding: 0.75rem;
+    word-wrap: break-word;
+    word-break: break-all;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .output .previous-operand {
+    color: rgba(255, 255, 255, 0.75);
+  }
+  
+  .output .current-operand {
+    color: var(--text-color);
+    font-size: 2.5rem;
+  }
+  
